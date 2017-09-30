@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Job Percentages
+  </title>
+</head>
+
+<body>
+  <h1>Interested in a job?</h1>
+  <table style="width:40%">
+    <tr>
+      <th> Job </th>
+      <th> Percentage </th>
+    </tr>
+
+    {% for k in dict %}
+    <tr>
+      <td> {{k}} </td>
+      <td> {{dict[k]}} </td>
+    </tr>
+    {% endfor %}
+    <h3> Your Job is... {{job}}!</h3>
+    {%block job%}
+    <h3></h3>
+    {%endblock%}
+  </table>
+</body>
+</html>
